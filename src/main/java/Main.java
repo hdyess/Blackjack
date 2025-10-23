@@ -4,12 +4,13 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		Card gamer = new Card("Spades", "gamer");
+		Deck deck = new Deck();
+		deck.shuffle();
 
-		gamer.flip();
-
-		gamer.getPointValue();
-		System.out.println(gamer.getPointValue());
+		for(Card c : deck.getCards()) {
+			c.flip();
+			System.out.println(c);
+		}
 
 
 	}

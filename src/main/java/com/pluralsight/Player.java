@@ -19,10 +19,11 @@ public class Player {
 		this.playerName = playerName;
 		this.playerBust = false;
 		this.humanAgent = isHumanAgent;
+		this.playerHand = new Hand();
 
 	}
 
-	public void deal(Card cardToDeal) {
+	public void dealToHand(Card cardToDeal) {
 		this.playerHand.deal(cardToDeal);
 	}
 

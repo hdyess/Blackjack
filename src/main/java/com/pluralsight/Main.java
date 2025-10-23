@@ -18,9 +18,11 @@ public class Main {
 		deck.shuffle();
 
 		for (Player p : players) {
-			p.deal(deck.deal());
-			System.out.println(p.getPlayerHand());
+			p.getPlayerHand().deal(deck.deal());
+			p.getPlayerHand().deal(deck.deal());
 		}
+
+		
 
 
 

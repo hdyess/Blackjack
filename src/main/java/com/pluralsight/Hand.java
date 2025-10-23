@@ -20,6 +20,9 @@ public class Hand {
 		return cards.size();
 	}
 
+	public ArrayList<Card> getCards() {
+		return cards;
+	}
 
 	/* The com.pluralsight.Hand uses the methods of each card to determine
 	the value of each card - and adds up all values

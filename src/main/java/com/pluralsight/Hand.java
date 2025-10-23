@@ -1,3 +1,5 @@
+package com.pluralsight;
+
 import java.util.ArrayList;
 
 public class Hand {
@@ -8,9 +10,9 @@ public class Hand {
 		cards = new ArrayList<>();
 	}
 
-	// A Card is dealt to the Hand and the Hand is responsible
+	// A com.pluralsight.Card is dealt to the com.pluralsight.Hand and the com.pluralsight.Hand is responsible
 	// to store the card
-	public void Deal(Card card){
+	public void deal(Card card){
 		cards.add(card);
 	}
 
@@ -19,7 +21,7 @@ public class Hand {
 	}
 
 
-	/* The Hand uses the methods of each card to determine
+	/* The com.pluralsight.Hand uses the methods of each card to determine
 	the value of each card - and adds up all values
 
 	not keeping because no check if card is flipped, so a face down card would be return
@@ -27,7 +29,7 @@ public class Hand {
 
 	public int getValue(){
 		int value = 0;
-		for(Card card: cards){
+		for(com.pluralsight.Card card: cards){
 			card.flip(); // turn the card over to see the value
 			value += card.getPointValue();
 			card.flip(); // hide the card again

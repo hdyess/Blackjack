@@ -1,3 +1,5 @@
+package com.pluralsight;
+
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -44,4 +46,4 @@ public class Deck {
 		return cards.size();
 	}
 
-}// Deck
+}// com.pluralsight.Deck

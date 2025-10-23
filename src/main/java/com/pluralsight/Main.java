@@ -1,19 +1,27 @@
+package com.pluralsight;
 
+import java.util.ArrayList;
 
 public class Main {
 
 	public static void main(String[] args) {
 
-		System.out.println("there are 3 players");
+		ArrayList<Player> players = new ArrayList<>();
+		int numberOfPlayers = ConsoleHelper.promptForInt("How many players?");
 
+		for (int i = 1; i <= numberOfPlayers; i++) {
+				Player p = new Player(false, ConsoleHelper.promptForString("Name for player" + i + ": "));
+				players.add(p);
+		}
 
 		Deck deck = new Deck();
 		deck.shuffle();
 
-		for(Card c : deck.getCards()) {
-			c.flip();
-			System.out.println(c);
+		for (Player p : players) {
+			p.deal(deck.deal());
+			System.out.println(p.getPlayerHand());
 		}
+
 
 
 	}

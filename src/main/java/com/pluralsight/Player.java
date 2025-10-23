@@ -1,3 +1,5 @@
+package com.pluralsight;
+
 public class Player {
 
 	private Hand playerHand;
@@ -20,6 +22,11 @@ public class Player {
 
 	}
 
+	public void deal(Card cardToDeal) {
+		this.playerHand.deal(cardToDeal);
+	}
 
-
+	public Hand getPlayerHand() {
+		return playerHand;
+	}
 }
